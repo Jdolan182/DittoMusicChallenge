@@ -55,6 +55,9 @@ $filename = 'SalaryOuput.csv';
 if(isset($argv[1]))
 {
     $filename = $argv[1];
+    if(!str_ends_with($filename, '.csv')){
+        $filename = $filename . '.csv';
+    }
 }
 
 $output->run($filename);
